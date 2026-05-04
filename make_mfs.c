@@ -36,12 +36,12 @@ struct superblock // Resides in Block 0
     int num_inodes;     // 256 total inodes
 };
 
-struct direnty // Resides Block 5
+struct direnrty // Resides Block 5
 {
     char filename[MAXFILENAME];     // 32 bytes for the file name
     int inode_number;               // 4 bytes for the inode number
-    int padding[28];                // padding to make the size of direnty 64 bytes
-}; // A single block of size 16KB can store 256 direntys (16KB / 64 bytes = 256)
+    char padding[28];                // padding to make the size of direntrys 64 bytes
+}; // A single block of size 16KB can store 256 direntrys (16KB / 64 bytes = 256)
 
 struct inode {
     int inode_number;     // 4 bytes 
