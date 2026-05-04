@@ -61,7 +61,7 @@ struct superblock // Resides in Block 0
     int num_inodes;     // 256 total inodes
 };
 
-struct direnrty // Resides Block 5
+struct direntry // Resides Block 5
 {
     char filename[MAXFILENAME];     // 32 bytes for the file name
     int inode_number;               // 4 bytes for the inode number
